@@ -102,8 +102,11 @@
                 </div>
 
                 <div class="messages-box">
-                    
+                    <div v-for="(contact, index) in contacts">
+                        {{contact.messages.message}}
+                    </div>
                 </div>
+
                 <div class="write-message">
                     <button>
                         <i class="fa-solid fa-face-smile"></i>

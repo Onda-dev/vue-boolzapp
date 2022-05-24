@@ -162,11 +162,12 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
+                
             }
+
         ]
     },
     methods: {
 
     }
 })
-

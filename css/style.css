@@ -104,13 +104,15 @@ body {
 -----------------*/
 .chat {
     width: 65%;
-    background-color: violet;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .messages-box {
+    width: 100%;
+    height: calc(100vh - 40px - 40px - 60px);
+    background-image: url(../img/mine.jpg);
     overflow: auto;
 }
 
