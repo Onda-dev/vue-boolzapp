@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <div class="container">
+        <div id="app" class="container">
 
             <div class="navigator">
                 <div class="header">
@@ -39,6 +39,34 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="notifications">
+                    <div class="icon">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="notifications-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche</a>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <form class="search" action="">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                      </form>
+                </div>
+
+                <div class="chat-list">
+                    <ul>
+                        <li v-for="contact in contacts">
+                            <div class="avatar">
+                                <img :src="'avatar' contact.avatar .jpg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="chat">
@@ -71,7 +99,7 @@
                     <button>
                         <i class="fa-solid fa-face-smile"></i>
                     </button>
-                    <input type="text">
+                    <input type="text" placeholder="Scrivi un messaggio">
                     <button>
                         <i class="fa-solid fa-microphone"></i>
                     </button>

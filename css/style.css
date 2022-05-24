@@ -37,6 +37,29 @@ body {
     background-color: aqua;
 }
 
+.notifications {
+    background-color: azure;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notifications .icon {
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.search-bar {
+    padding: 10px;
+    text-align: center;
+    background-color: bisque;
+}
 /*-----------------
     CHAT
 -----------------*/
