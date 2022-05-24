@@ -123,6 +123,14 @@ body {
     background-color: rgb(127, 255, 136);
 }
 
+.sent-message {
+    text-align: left;
+}
+
+.received-message {
+    text-align: right;
+}
+
 /*--------------------------
     NAVIGATOR/CHAT COMMONS
 ---------------------------*/

@@ -168,6 +168,8 @@ const app = new Vue({
         ]
     },
     methods: {
+        chatMessage(){
 
+        }
     }
 })

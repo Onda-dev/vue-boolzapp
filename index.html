@@ -103,7 +103,9 @@
 
                 <div class="messages-box">
                     <div v-for="(contact, index) in contacts">
-                        {{contact.messages.message}}
+                        <div v-for="(message, index) in contact.messages" :class="chatMessage()">
+                            {{message.message}}
+                        </div>
                     </div>
                 </div>
 
