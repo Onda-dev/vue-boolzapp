@@ -42,19 +42,19 @@ body {
     background-color: violet;
 }
 
-.navigator .header {
+.header {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     background-color: aquamarine;
 }
 
-.user {
+.user, .interlocutor {
     display: flex;
     align-items: center;
 }
 
-.user-avatar {
+.user-avatar, .interlocutor-avatar {
     width: 40px;
     height: 40px;
     background-color: rgb(157, 130, 238);
@@ -67,3 +67,7 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+/*-----------------
+    CHAT
+-----------------*/
