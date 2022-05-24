@@ -39,9 +39,11 @@ body {
 .navigator {
     width: 35%;
     background-color: aqua;
+    border-right: 1px solid grey;
 }
 
 .notifications {
+    height: 60px;
     background-color: azure;
     padding: 10px;
     display: flex;
@@ -60,9 +62,42 @@ body {
 }
 
 .search-bar {
+    height: 40px;
     padding: 10px;
     text-align: center;
     background-color: bisque;
+}
+.chat-list {
+    height: calc(100vh - 40px - 40px - 60px - 60px );
+    overflow: auto;
+}
+
+.chat-list .avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.contact-box {
+    display: flex;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message-time {
+    text-align: right;
+    vertical-align: top;
 }
 /*-----------------
     CHAT
@@ -86,33 +121,11 @@ body {
     background-color: rgb(127, 255, 136);
 }
 
-.chat-list {
-    height: 100%;
-    overflow: auto;
-}
-
-.chat-list .avatar img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.chat-list li {
-    display: flex;
-    padding: 10px;
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 /*--------------------------
     NAVIGATOR/CHAT COMMONS
 ---------------------------*/
 .header {
+    height: 60px;
     padding: 10px;
     display: flex;
     justify-content: space-between;
