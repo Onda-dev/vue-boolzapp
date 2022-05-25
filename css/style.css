@@ -10,6 +10,8 @@
 button {
     background: none;
     border: none;
+    cursor: pointer;
+    padding: 4px;
 }
 
 li {
@@ -83,6 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    cursor: pointer;
 }
 
 .contact-box {
@@ -110,8 +113,10 @@ body {
 }
 
 .messages-box {
-    width: 100%;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-image: url(../img/mine.jpg);
     overflow: auto;
     padding: 30px;
@@ -125,11 +130,19 @@ body {
 }
 
 .sent-message {
-    text-align: right;
+    margin-left: auto;
+    width: fit-content;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .received-message {
-    text-align: left;
+    margin-right: auto;
+    width: fit-content;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /*--------------------------
