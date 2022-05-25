@@ -161,7 +161,7 @@ body {
     align-items: center;
 }
 
-.user-avatar, .interlocutor-avatar {
+.user-avatar, .interlocutor-avatar img {
     width: 40px;
     height: 40px;
     background-color: rgb(157, 130, 238);

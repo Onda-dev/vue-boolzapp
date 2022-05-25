@@ -81,9 +81,11 @@
             <div class="chat">
                 <div class="header">
                     <div class="interlocutor">
-                        <div class="interlocutor-avatar"></div>
+                        <div class="interlocutor-avatar">
+                            <img :src="'img/avatar' + contacts[currentIndex].avatar + '.jpg'" alt="">
+                        </div>
                         <div class="interlocutor-info">
-                            <div class="name">Placeholder</div>
+                            <div class="name">{{contacts[currentIndex].name}}</div>
                             <div class="last-access">Ultimo accesso alle</div>
                         </div>
                     </div>
@@ -103,7 +105,8 @@
 
                 <div class="messages-box">
                     <div v-for="(message, index) in contacts[currentIndex].messages" :class="`${message.status}-message`">
-                        <div>{{message.message}}</div>
+                        <div class="message-text">{{message.message}}</div>
+                        <div class="message-time"></div>
                     </div>
                 </div>
 
