@@ -59,7 +59,7 @@
 
                 <div class="chat-list">
                     <ul>
-                        <li v-for="contact in contacts">
+                        <li v-for="contact in contacts" @click="changeConversation(index)">
                             <div class="contact-box">
                                 <div class="avatar">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
@@ -102,10 +102,8 @@
                 </div>
 
                 <div class="messages-box">
-                    <div v-for="(contact, index) in contacts">
-                        <div v-for="(message, index) in contact.messages" :class="chatMessage()">
-                            {{message.message}}
-                        </div>
+                    <div v-for="(message, index) in contacts[currentIndex].messages" :class="`${message.status}-message`">
+                        {{message.message}}
                     </div>
                 </div>
 
