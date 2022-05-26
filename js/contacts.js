@@ -179,7 +179,8 @@ const app = new Vue({
                 message: this.newMessageInput,
                 status: 'sent',
             }
-            this.contacts[currentIndex].push(newMessage)
+            this.contacts[this.currentIndex].messages.push(newMessage)
+            this.newMessageInput = ""
             console.log(newMessage)
         }
     }
