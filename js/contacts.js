@@ -179,10 +179,11 @@ const app = new Vue({
                 message: this.newMessageInput,
                 status: 'sent',
             }
-            this.contacts[this.currentIndex].messages.push(newMessage)
-            this.newMessageInput = ""
-
-            setTimeout(this.receivedMessage, 3000)
+            if (this.newMessageInput !== ""){
+                this.contacts[this.currentIndex].messages.push(newMessage)
+                this.newMessageInput = ""
+                setTimeout(this.receivedMessage, 3000)
+            }
         },
         receivedMessage(){
             const newAnswer = {
