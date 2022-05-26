@@ -2,6 +2,7 @@ const app = new Vue({
     el: "#app",
     data: {
         currentIndex: 0,
+        newMessageInput: "",
         contacts: [
             {
                 name: 'Michele',
@@ -171,6 +172,15 @@ const app = new Vue({
     methods: {
         changeConversation(index){
             this.currentIndex = index
+        },
+        sendMessage(){
+            const newMessage = {
+                date: '',
+                message: this.newMessageInput,
+                status: 'sent',
+            }
+            this.contacts[currentIndex].push(newMessage)
+            console.log(newMessage)
         }
     }
 })

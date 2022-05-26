@@ -114,7 +114,9 @@
                     <button>
                         <i class="fa-solid fa-face-smile"></i>
                     </button>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <form @submit.prevent="sendMessage()">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessageInput">
+                    </form>
                     <button>
                         <i class="fa-solid fa-microphone"></i>
                     </button>
