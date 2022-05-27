@@ -15,6 +15,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <!-- Vue -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <!-- Luxon -->
+        <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
     </head>
     <body>
 
@@ -51,9 +53,9 @@
                 </div>
 
                 <div class="search-bar">
-                    <form class="search" action="">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" name="search">
+                    <form class="search" @submit.prevent="contactsFilter()">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="contactsFilterInput">
                     </form>
                 </div>
 
@@ -70,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="message-time">
-                                12:00
+                                {{getLastMessageHour(contact)}}
                             </div>
                         </li>
                     </ul>
@@ -86,7 +88,7 @@
                         </div>
                         <div class="interlocutor-info">
                             <div class="name">{{contacts[currentIndex].name}}</div>
-                            <div class="last-access">Ultimo accesso alle</div>
+                            <div class="last-access">Ultimo accesso oggi alle</div>
                         </div>
                     </div>
 

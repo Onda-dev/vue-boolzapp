@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         currentIndex: 0,
         newMessageInput: "",
+        contactsFilterInput: "",
         contacts: [
             {
                 name: 'Michele',
@@ -192,6 +193,22 @@ const app = new Vue({
                 status: 'received'
             }
             this.contacts[this.currentIndex].messages.push(newAnswer)
+        },
+        getLastMessageHour(contact){
+            const DateTime = luxon.DateTime
+            const mess = contact.messages[contact.messages.length - 1]
+            return DateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm')
+        },
+        contactsFilter(){
+            this.contacts.forEach(element => {
+                if(element.name.includes(this.contactsFilterInput)){
+                    element.visible = true
+                } else {
+                    element.visible = false
+                }
+                this.contactsFilterInput = ""
+            });
+
         }
     }
 })
