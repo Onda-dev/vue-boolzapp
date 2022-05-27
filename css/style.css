@@ -81,7 +81,7 @@ body {
     margin-right: 10px;
 }
 
-.chat-list li {
+li {
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -102,6 +102,15 @@ body {
     text-align: right;
     vertical-align: top;
 }
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
 /*-----------------
     CHAT
 -----------------*/

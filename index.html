@@ -61,7 +61,7 @@
 
                 <div class="chat-list">
                     <ul>
-                        <li v-for="(contact, index) in contacts" @click="changeConversation(index)">
+                        <li v-for="(contact, index) in contacts" @click="changeConversation(index)" :class="contact.visible ? 'show' : 'hide'">
                             <div class="contact-box">
                                 <div class="avatar">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
