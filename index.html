@@ -23,10 +23,12 @@
         <div id="app" class="container">
 
             <div class="navigator">
-                <div class="header">
+                <div class="header nav-header">
                     <div class="user">
-                        <div class="user-avatar"></div>
-                        <div class="name">placeholder</div>
+                        <div class="user-avatar">
+                            <img src="img/propic.jpg" alt="">
+                        </div>
+                        <div class="name">Erica</div>
                     </div>
 
                     <div class="control-buttons">
@@ -55,7 +57,7 @@
                 <div class="search-bar">
                     <form class="search" @submit.prevent="contactsFilter()">
                         <i class="fa fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="contactsFilterInput">
+                        <input type="text" id="search-bar" placeholder="Cerca o inizia una nuova chat" v-model="contactsFilterInput">
                     </form>
                 </div>
 
@@ -81,7 +83,7 @@
             </div>
 
             <div class="chat">
-                <div class="header">
+                <div class="header chat-header">
                     <div class="interlocutor">
                         <div class="interlocutor-avatar">
                             <img :src="'img/avatar' + contacts[currentIndex].avatar + '.jpg'" alt="">
@@ -113,11 +115,12 @@
                 </div>
 
                 <div class="write-message">
+   
                     <button>
-                        <i class="fa-solid fa-face-smile"></i>
+                        <i class="fa-solid fa-smile"></i>
                     </button>
                     <form @submit.prevent="sendMessage()">
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessageInput">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessageInput" id="write-message">
                     </form>
                     <button>
                         <i class="fa-solid fa-microphone"></i>

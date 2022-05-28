@@ -200,13 +200,14 @@ const app = new Vue({
             return DateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm')
         },
         contactsFilter(){
-            this.contacts.forEach(element => {
-                if(element.name.includes(this.contactsFilterInput)){
+            this.contactsFilterInput = this.contactsFilterInput.toLowerCase();
+            this.contacts.forEach((element) => {
+                element.name = element.name.toLowerCase()
+                if (element.name.includes(this.contactsFilterInput)) {
                     element.visible = true
                 } else {
                     element.visible = false
                 }
-                this.contactsFilterInput = ""
             })
         },
     }
