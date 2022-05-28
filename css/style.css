@@ -78,7 +78,10 @@ button {
 -----------------*/
 .navigator {
     width: 35%;
-    border-right: 1px solid grey;
+    border-right: 1px solid rgb(41, 41, 41);
+    background-color: rgba(48, 49, 52, 0.4);
+    backdrop-filter: blur(40px);
+    border-top-left-radius: 10px;
 }
 
 .navigator img {
@@ -86,16 +89,8 @@ button {
     border-radius: 50%;
 }
 
-.header.nav-header {
-    background-color: rgba(78, 75, 79, 0.9);
-    backdrop-filter: blur(40px);
-    border-top-left-radius: 10px;
-}
-
 .notifications {
     height: 60px;
-    background-color: rgba(78, 75, 79, 0.7);
-    backdrop-filter: blur(40px);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -117,16 +112,12 @@ button {
     height: 50px;
     padding: 10px;
     text-align: center;
-    background-color: rgba(78, 75, 79, 0.5);
-    backdrop-filter: blur(40px);
 }
 
 .chat-list {
     height: calc(100vh - 210px);
     overflow: auto;
     padding: 0 10px;
-    background-color: rgba(48, 49, 52, 0.4);
-    backdrop-filter: blur(40px);
     border-bottom-left-radius: 10px;
 }
 
@@ -176,6 +167,12 @@ li {
     border-radius: 5px;
 }
 
+.nav-divider {
+    width: 90%;
+    margin: auto;
+    filter: opacity(0.3);
+}
+
 /*-----------------
     CHAT
 -----------------*/
@@ -187,7 +184,7 @@ li {
 }
 
 .header.chat-header {
-    background-color: rgba(78, 75, 79, 1);
+    background-color: rgb(44, 44, 44);
     border-top-right-radius: 10px;
 }
 
@@ -207,7 +204,7 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgba(78, 75, 79, 1);
+    background-color: rgb(44, 44, 44);
     border-bottom-right-radius: 10px;
 }
 

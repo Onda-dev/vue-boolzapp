@@ -44,6 +44,8 @@
                     </div>
                 </div>
 
+                <hr class="nav-divider">
+
                 <div class="notifications">
                     <div class="icon">
                         <i class="fa-solid fa-bell-slash"></i>
@@ -54,12 +56,16 @@
                     </div>
                 </div>
 
+                <hr class="nav-divider">
+
                 <div class="search-bar">
                     <form class="search" @submit.prevent="contactsFilter()">
                         <i class="fa fa-search"></i>
                         <input type="text" id="search-bar" placeholder="Cerca o inizia una nuova chat" v-model="contactsFilterInput">
                     </form>
                 </div>
+
+                <hr class="nav-divider">
 
                 <div class="chat-list">
                     <ul>
