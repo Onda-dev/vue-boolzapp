@@ -116,7 +116,7 @@ button {
 }
 
 .chat-list {
-    height: calc(100vh - 210px);
+    height: calc(100vh - 216px);
     overflow: auto;
     padding: 0 10px;
     border-bottom-left-radius: 10px;
