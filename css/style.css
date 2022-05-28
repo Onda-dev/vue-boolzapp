@@ -82,6 +82,7 @@ button {
     background-color: rgba(48, 49, 52, 0.4);
     backdrop-filter: blur(40px);
     border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .navigator img {
