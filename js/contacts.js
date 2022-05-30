@@ -200,10 +200,8 @@ const app = new Vue({
             return DateTime.fromFormat(mess.date, "dd/MM/yyyy HH:mm:ss").toFormat('HH:mm')
         },
         contactsFilter(){
-            this.contactsFilterInput = this.contactsFilterInput.toLowerCase();
             this.contacts.forEach((element) => {
-                element.name = element.name.toLowerCase()
-                if (element.name.includes(this.contactsFilterInput)) {
+                if (element.name.toLowerCase().includes(this.contactsFilterInput.toLowerCase())) {
                     element.visible = true
                 } else {
                     element.visible = false
